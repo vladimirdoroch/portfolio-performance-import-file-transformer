@@ -1,0 +1,49 @@
+name: Bug report
+description: Report a parsing error or incorrect CSV output
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug!
+        Please include as much detail as possible — ideally a minimal reproduction.
+        **Do not attach real financial documents** — create a sanitised sample instead.
+
+  - type: dropdown
+    id: source
+    attributes:
+      label: Source
+      description: Which data source is affected?
+      options:
+        - comdirect-securities-account
+        - comdirect-dividends
+        - dkb-portfolio-transactions
+        - degiro-transactions
+        - degiro-account
+        - coinbase-transactions
+        - Other / unsure
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the bug. Include the exact command you ran.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction
+      description: |
+        Paste sanitised input text or a short CSV/PDF excerpt that triggers the bug.
+        Replace all personal data (names, IBANs, account numbers) with placeholders.

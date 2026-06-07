@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+*.suo
+*.user
+
+# Environment
+.env
+.env.local
+
+# Private / PII financial documents
+dividends/
+IGNORE.md
+
+# Vitest compiled config
+vitest.config.js
+vitest.config.js.map
+vitest.config.d.ts
+vitest.config.d.ts.map
+

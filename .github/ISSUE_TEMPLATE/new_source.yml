@@ -1,0 +1,45 @@
+name: New source request
+description: Request support for a new broker or document type
+labels: [enhancement, new-source]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Want to add a new data source? Great! Please fill out this form so we can
+        understand what's needed. If you're able to implement it yourself, see
+        `AGENTS.md` for the step-by-step guide.
+
+  - type: input
+    id: broker
+    attributes:
+      label: Broker / institution name
+    validations:
+      required: true
+
+  - type: input
+    id: document-type
+    attributes:
+      label: Document type
+      description: e.g. "Annual account statement PDF", "Transactions CSV export"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: output-type
+    attributes:
+      label: Expected Portfolio Performance import type
+      options:
+        - Portfolio Transactions
+        - Account Transactions
+        - Both
+        - Unsure
+    validations:
+      required: true
+
+  - type: textarea
+    id: sample
+    attributes:
+      label: Sanitised sample document (text excerpt)
+      description: |
+        Paste a few representative lines from the document with all personal data
+        replaced by placeholders.  This is the most helpful thing you can provide.

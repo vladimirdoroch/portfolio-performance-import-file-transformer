@@ -1,0 +1,70 @@
+{
+  "name": "portfolio-tools",
+  "version": "1.0.0",
+  "description": "CLI tools to convert broker export files (Comdirect, DKB, DeGiro, Coinbase) into Portfolio Performance import CSVs.",
+  "author": "Vladimir Doroch",
+  "license": "MIT",
+  "keywords": [
+    "portfolio-performance",
+    "comdirect",
+    "dkb",
+    "degiro",
+    "coinbase",
+    "finance",
+    "csv",
+    "import"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vladimirdoroch/portfolio-tools.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vladimirdoroch/portfolio-tools/issues"
+  },
+  "homepage": "https://github.com/vladimirdoroch/portfolio-tools#readme",
+  "engines": {
+    "node": ">=20"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "portfolio-tools": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "start": "node dist/index.js",
+    "cli": "bun src/cli.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src test/sources",
+    "lint:fix": "eslint src test/sources --fix",
+    "format": "prettier --write \"src/**/*.ts\" \"test/sources/**/*.ts\"",
+    "format:check": "prettier --check \"src/**/*.ts\" \"test/sources/**/*.ts\"",
+    "prepublishOnly": "npm run typecheck && npm run build"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^25.9.1",
+    "eslint": "^10.4.1",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.8.3",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.60.0",
+    "vitest": "^4.1.7"
+  },
+  "dependencies": {
+    "@types/pdf-parse": "^1.1.5",
+    "pdf-parse": "^2.4.5"
+  }
+}
