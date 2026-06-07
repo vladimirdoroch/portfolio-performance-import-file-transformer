@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/vladimirdoroch/portfolio-tools#readme",
   "engines": {
-    "node": ">=20"
+    "node": ">=22"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
