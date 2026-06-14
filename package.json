@@ -55,7 +55,7 @@
   "type": "module",
   "devDependencies": {
     "@emnapi/core": "^1.10.0",
-    "@emnapi/runtime": "^1.10.0",
+    "@emnapi/runtime": "^1.11.1",
     "@eslint/js": "^10.0.1",
     "@types/node": "^25.9.1",
     "eslint": "^10.4.1",
